@@ -1,25 +1,22 @@
-html {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 /* header*/
 header {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 12px 0;
+  box-shadow: 0px 6px 9px 0px #b9b9b9ab;
 }
 
 header img {
-  width: 200px;
   height: 68px;
 }
 /*main*/
-/*Localisation*/
+/*bouton de recherche*/
 
 .recherche_lieu {
   display: flex;
@@ -31,10 +28,19 @@ header img {
   font-family: roboto;
   font-weight: 600;
 }
-
-.fa-location-dot {
-  padding-right: 20px;
+.lieu::placeholder {
+  color: #000000;
 }
+.lieu {
+  border: none;
+  background-color: transparent;
+}
+.lieu {
+  font-family: roboto;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 /*Description*/
 
 .description {
@@ -48,7 +54,6 @@ h1 {
   font-size: 25px;
   font-family: roboto;
   font-weight: 800;
-  padding: 0 80px;
   display: flex;
   justify-content: center;
   margin-bottom: 0;
@@ -58,7 +63,6 @@ h1 {
 .description p {
   font-size: 16px;
   font-weight: 300;
-  padding: 0 80px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -80,6 +84,12 @@ h1 {
 
 /*Fonctionnement*/
 
+.fonctionnement h2 {
+  margin: 50px 0 30px 50px;
+  font-weight: 700;
+  font-family: Roboto;
+}
+
 .etapes {
   padding: 20px;
   box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.26);
@@ -91,23 +101,28 @@ h1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
-ol :hover {
-  background-color: rgba(147, 86, 220, 0.2);
+ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 }
-.etapes .fa-solid:hover {
-  color: #9356dc;
+
+.etapes:hover {
+  background-color: rgba(147, 86, 220, 0.2);
 }
 .etapes .fa-solid {
   color: gray;
   margin-right: 15px;
   margin-left: 40px;
 }
-
-ol {
-  list-style: none;
-  padding: 0;
+.etapes:hover .fa-solid {
+  color: #9356dc;
 }
 
 .liste {
@@ -119,10 +134,9 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.fonctionnement h2 {
-  margin: 50px 0 30px 10px;
+  position: absolute;
+  top: calc(50% - 19px);
+  left: -19px;
 }
 
 /*Liste des restaurants*/
@@ -132,19 +146,33 @@ ol {
   background-color: #f2f2f2;
   padding-top: 40px;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .liste_restaurants h2 {
-  margin-left: 41px;
+  margin-left: 50px;
   font-weight: 700;
   font-family: roboto;
+  align-self: flex-start;
 }
-
+article {
+  position: relative;
+  width: 80%;
+  margin-bottom: 60px;
+}
 figure {
   border-radius: 30px;
   background-color: #ffffff;
   height: 270px;
   box-shadow: 5px 5px 5px #ccc8c8;
+  position: relative;
+  margin: 0;
 }
 
 figure img {
@@ -172,6 +200,13 @@ figcaption p {
   font-weight: 500;
   margin-top: 5px;
 }
+
+.favori {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
 /*footer*/
 .infos {
   background-color: #46494c;
