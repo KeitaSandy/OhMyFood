@@ -1,0 +1,121 @@
+html {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  width: 200px;
+  height: 68px;
+}
+
+.recherche_lieu {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(105, 105, 105, 0.14);
+  padding: 20px 15px;
+  font-size: 18px;
+  color: #000000;
+  font-family: roboto;
+  font-weight: 600;
+}
+
+.fa-location-dot {
+  padding-right: 20px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(180deg, white, rgb(239, 239, 239));
+}
+h1 {
+  font-size: 25px;
+  font-family: roboto;
+  font-weight: 800;
+  padding: 0 80px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+
+.description p {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 80px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: roboto;
+}
+
+.explorer {
+  border-radius: 30px;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  font-size: 20px;
+  color: #ffffff;
+  font-family: roboto;
+  border: none;
+  padding: 16px;
+  box-shadow: 4px 4px 2px #ccc8c8;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.etapes {
+  padding: 20px;
+  box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.26);
+  border-radius: 20px;
+  margin: 16px 0;
+  font-family: roboto;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+ol :hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.etapes .fa-solid:hover {
+  color: #9356dc;
+}
+.etapes .fa-solid {
+  color: gray;
+  margin-right: 15px;
+  margin-left: 40px;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+.liste {
+  background-color: #9356dc;
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fonctionnement h2 {
+  margin: 50px 0 30px 10px;
+}
