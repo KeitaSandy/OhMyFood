@@ -1,0 +1,27 @@
+/*footer*/
+footer {
+  background-color: #46494c;
+  color: #ffffff;
+  font-family: roboto;
+}
+footer h4 {
+  font-family: shrikhand;
+  margin-left: 40px;
+  font-size: 30px;
+  margin-top: 30px;
+}
+footer ul {
+  list-style: none;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+footer ul li a {
+  color: #ffffff;
+  font-family: roboto;
+}/*# sourceMappingURL=footer.css.map */

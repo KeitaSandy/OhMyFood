@@ -4,58 +4,52 @@ body {
   margin: 0;
   font-family: roboto;
 }
-
-/* header*/
-
-header {
+body header {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 12px 0;
-  box-shadow: 0px 6px 9px 0px #b9b9b9ab;
+  box-shadow: 0px 6px 9px 0px rgba(185, 185, 185, 0.6705882353);
 }
-
-header img {
+body header img {
   height: 68px;
 }
-/*main*/
-/*bouton de recherche*/
-
-.recherche-lieu {
+body .recherche-lieu {
   display: flex;
   justify-content: center;
   background-color: rgba(105, 105, 105, 0.14);
   padding: 20px 15px;
   font-size: 18px;
   color: #000000;
-  font-family: roboto;
   font-weight: 600;
 }
-.lieu::placeholder {
-  color: #000000;
-}
-
-input:focus {
-  outline: none;
-}
-.lieu {
+body .recherche-lieu .lieu {
   border: none;
   background-color: transparent;
   font-size: 20px;
   font-weight: 700;
   width: 150px;
 }
-
-/*Description*/
-
-.description {
+body .recherche-lieu .lieu::focus {
+  outline: none;
+}
+body .recherch-lieu .lieu::-moz-placeholder {
+  color: #000000;
+}
+body .recherche-lieu .lieu:-ms-input-placeholder {
+  color: #000000;
+}
+body .recherche-lieu .lieu::placeholder {
+  color: #000000;
+}
+body .description {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background-image: linear-gradient(180deg, white, rgb(239, 239, 239));
 }
-.description h1 {
+body .description h1 {
   font-size: 25px;
   font-weight: 800;
   display: flex;
@@ -63,16 +57,14 @@ input:focus {
   margin-bottom: 0;
   margin-top: 40px;
 }
-
-.description p {
+body .description p {
   font-size: 16px;
   font-weight: 300;
   display: flex;
   justify-content: center;
   text-align: center;
 }
-
-.description-button {
+body .description .description-button {
   border-radius: 30px;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   font-size: 20px;
@@ -84,15 +76,11 @@ input:focus {
   margin-top: 30px;
   cursor: pointer;
 }
-
-/*Fonctionnement*/
-
-.step h2 {
+body .step h2 {
   margin: 50px 0 30px 50px;
   font-weight: 700;
 }
-
-.step-list {
+body .step-list {
   padding: 20px;
   box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.26);
   border-radius: 20px;
@@ -104,8 +92,7 @@ input:focus {
   align-items: center;
   position: relative;
 }
-
-.step ol {
+body .step ol {
   list-style: none;
   padding: 0;
   display: flex;
@@ -113,20 +100,18 @@ input:focus {
   width: 80%;
   margin: 0 auto;
 }
-
-.step-list:hover {
+body .step-list:hover {
   background-color: rgba(147, 86, 220, 0.2);
 }
-.step-list .fa-solid {
+body .step-list .fa-solid {
   color: gray;
   margin-right: 15px;
   margin-left: 40px;
 }
-.step-list:hover .fa-solid {
+body .step-list:hover .fa-solid {
   color: #9356dc;
 }
-
-.step-list-num {
+body .step-list-num {
   background-color: #9356dc;
   color: #ffffff;
   width: 38px;
@@ -139,10 +124,7 @@ input:focus {
   top: calc(50% - 19px);
   left: -19px;
 }
-
-/*Liste des restaurants*/
-
-.liste-restaurants {
+body .liste-restaurants {
   margin-top: 40px;
   background-color: #f2f2f2;
   padding-top: 40px;
@@ -151,22 +133,21 @@ input:focus {
   flex-direction: column;
   align-items: center;
 }
-a {
+body a {
   text-decoration: none;
   color: #000000;
 }
-
-.liste-restaurants h2 {
+body .liste-restaurants h2 {
   margin-left: 50px;
   font-weight: 700;
   align-self: flex-start;
 }
-article {
+body article {
   position: relative;
   width: 80%;
   margin-bottom: 60px;
 }
-.nouveau {
+body .nouveau {
   position: absolute;
   top: 15px;
   right: 12px;
@@ -174,7 +155,7 @@ article {
   color: #1b6150;
   padding: 10px;
 }
-figure {
+body figure {
   border-radius: 30px;
   background-color: #ffffff;
   height: 270px;
@@ -182,38 +163,35 @@ figure {
   position: relative;
   margin: 0;
 }
-
-figure img {
+body figure img {
   width: 100%;
   border-radius: 30px 30px 0 0;
   height: 200px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
-
-figcaption {
+body figcaption {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
 }
-
-figcaption h3 {
+body figcaption h3 {
   font-size: 15px;
   font-family: roboto;
   margin: 0;
 }
-
-figcaption p {
+body figcaption p {
   font-size: 12px;
   font-family: Roboto;
   font-weight: 500;
   margin-top: 5px;
 }
-
-.favori {
+body .favori {
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
+
 /*footer*/
 footer {
   background-color: #46494c;
@@ -240,4 +218,4 @@ footer ul li i {
 footer ul li a {
   color: #ffffff;
   font-family: roboto;
-}
+} /*# sourceMappingURL=styles.css.map */

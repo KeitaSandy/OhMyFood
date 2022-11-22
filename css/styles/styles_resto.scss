@@ -1,0 +1,96 @@
+/*couleurs*/
+$pink: #ff79da;
+$purplue: #9356dc;
+$colorscript-light: #ffffff;
+$colorscript-dark: #000000;
+$shadow: #ccc8c8;
+$main-backcolor: #e8e8e8;
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: roboto;
+}
+
+/*main*/
+
+main {
+  background-color: $main-backcolor;
+  border-radius: 60px 60px 0 0;
+  width: 100%;
+  position: relative;
+  margin-top: -60px;
+
+  .favori {
+    position: absolute;
+    top: 45px;
+    right: 40px;
+    font-size: 40px;
+  }
+
+  h2 {
+    padding-left: 30px;
+    align-self: flex-start;
+    padding-top: 20px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    padding: 0;
+
+    li {
+      background-color: $colorscript-light;
+      border-radius: 15px;
+      width: 80%;
+      display: flex;
+      position: relative;
+
+      h3 {
+        margin-left: 10px;
+        margin-bottom: 0;
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      p {
+        margin-left: 10px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+    .menulist-items__price {
+      position: absolute;
+      top: 35px;
+      right: 35px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}
+/*bouton de commande*/
+.bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .bouton-order {
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom right, $pink, $purplue);
+    font-size: 35px;
+    color: $colorscript-light;
+    border: none;
+    padding: 16px;
+    box-shadow: 4px 4px 2px $shadow;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+}
+@import "footer.scss";
