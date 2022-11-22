@@ -74,6 +74,13 @@ main h2 {
   padding-left: 30px;
   align-self: flex-start;
   padding-top: 20px;
+  margin: 0;
+}
+main .h2-underline {
+  width: 50px;
+  height: 4px;
+  background-color: #99e2d0;
+  margin-left: 30px;
 }
 .menu li {
   background-color: #ffffff;

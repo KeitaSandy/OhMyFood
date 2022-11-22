@@ -1,16 +1,35 @@
-/*couleurs*/
-$pink: #ff79da;
-$purplue: #9356dc;
-$colorscript-light: #ffffff;
-$colorscript-dark: #000000;
-$shadow: #ccc8c8;
-$main-backcolor: #e8e8e8;
+@import "css\styles\_variables.scss";
 
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
   font-family: roboto;
+}
+
+/*header*/
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 12px 0;
+  nav {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 68px;
+    }
+    .backtrack {
+      position: absolute;
+      font-size: 50px;
+      left: 30px;
+      top: 21px;
+      .backtrack .fa-solid {
+        color: #000000;
+      }
+    }
+  }
 }
 
 /*main*/
@@ -33,6 +52,7 @@ main {
     padding-left: 30px;
     align-self: flex-start;
     padding-top: 20px;
+    border-bottom: 3px solid blue;
   }
   .menu {
     display: flex;
@@ -93,4 +113,4 @@ main {
     cursor: pointer;
   }
 }
-@import "footer.scss";
+@import "css\styles\_footer.scss";
