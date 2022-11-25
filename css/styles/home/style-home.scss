@@ -1,5 +1,11 @@
-@import "_variables.scss";
-@import "_loaders.scss";
+@import "../variables";
+@import "../../animations/loaders";
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: roboto;
+}
 
 /* header*/
 
@@ -17,7 +23,7 @@ header {
 
 /*bouton de recherche*/
 
-.recherche_lieu {
+.recherche-lieu {
   display: flex;
   justify-content: center;
   background-color: rgba(105, 105, 105, 0.14);
@@ -33,12 +39,12 @@ header {
     font-weight: 700;
     width: 150px;
 
-    &::focus {
+    &:focus {
       outline: none;
     }
 
     &::placeholder {
-      color: $main-scriptcolor;
+      color: $colorscript-dark;
     }
   }
 }
@@ -213,4 +219,4 @@ figcaption p {
   bottom: 20px;
   right: 20px;
 }
-@import "css\styles\_footer.scss";
+@import "../footer";

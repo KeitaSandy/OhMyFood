@@ -1,4 +1,4 @@
-@import "css\styles\_variables.scss";
+@import "../variables";
 
 body {
   display: flex;
@@ -25,10 +25,16 @@ header {
       font-size: 50px;
       left: 30px;
       top: 21px;
-      .backtrack .fa-solid {
-        color: #000000;
+      .fa-solid {
+        color: $colorscript-dark;
       }
     }
+  }
+
+  .photo-restaurant img {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
   }
 }
 
@@ -40,19 +46,38 @@ main {
   width: 100%;
   position: relative;
   margin-top: -60px;
+  h1 {
+    margin: 0;
+    font-family: shrikhand;
+    font-size: 35px;
+    color: #000000;
+    padding-top: 40px;
+    padding-left: 90px;
+  }
 
   .favori {
     position: absolute;
     top: 45px;
     right: 40px;
     font-size: 40px;
+    .fa-regular {
+      &:hover {
+        background-image: linear-gradient(to bottom right, $pink, $purplue);
+      }
+    }
   }
 
   h2 {
     padding-left: 30px;
     align-self: flex-start;
     padding-top: 20px;
-    border-bottom: 3px solid blue;
+    margin: 0;
+  }
+  .h2-underline {
+    width: 50px;
+    height: 4px;
+    background-color: #99e2d0;
+    margin-left: 30px;
   }
   .menu {
     display: flex;
@@ -61,35 +86,61 @@ main {
     align-items: center;
     padding: 0;
 
-    li {
+    .menulist {
       background-color: $colorscript-light;
       border-radius: 15px;
       width: 80%;
       display: flex;
-      position: relative;
-
-      h3 {
-        margin-left: 10px;
-        margin-bottom: 0;
-        margin-top: 15px;
+      align-items: center;
+      overflow: hidden;
+      .menulist-items {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          margin-left: 10px;
+          margin-bottom: 0;
+          margin-top: 15px;
+          font-weight: 700;
+          font-size: 20px;
+        }
+        p {
+          margin-left: 10px;
+          margin-bottom: 0;
+          margin-top: 10px;
+          padding-bottom: 20px;
+          font-size: 16px;
+        }
+      }
+      .menulist-items__price {
         font-weight: 700;
-        font-size: 20px;
+        font-size: 18px;
+        margin-left: auto;
+        padding-right: 35px;
       }
+      .menulist-items__transi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #99e2d0;
+        height: 90px;
+        width: 60px;
+        margin-right: -60px;
+        border-top-right-radius: 15px 15px;
+        border-bottom-right-radius: 15px 15px;
+        transition: margin-right 500ms;
 
-      p {
-        margin-left: 10px;
-        margin-bottom: 0;
-        margin-top: 10px;
-        padding-bottom: 20px;
-        font-size: 16px;
+        .fa-solid {
+          color: white;
+          font-size: xx-large;
+        }
       }
-    }
-    .menulist-items__price {
-      position: absolute;
-      top: 35px;
-      right: 35px;
-      font-weight: 700;
-      font-size: 18px;
+      &:hover {
+        cursor: pointer;
+
+        .menulist-items__transi {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
@@ -113,4 +164,4 @@ main {
     cursor: pointer;
   }
 }
-@import "css\styles\_footer.scss";
+@import "../footer";

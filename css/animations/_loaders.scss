@@ -28,7 +28,7 @@
   border: 6px solid transparent;
   border-top-color: #ff79da;
   border-bottom-color: #ff79da;
-  animation: spin 5s linear infinite;
+  animation: spin 3s linear infinite;
 
   &::after {
     content: "";
@@ -42,7 +42,7 @@
     border-bottom-color: #9356dc;
     border-radius: 160px;
 
-    animation: spinreverse 3s linear infinite;
+    animation: spinreverse 2s linear infinite;
   }
 
   &::before {
@@ -57,7 +57,7 @@
     border-bottom-color: #99e2d0;
     border-radius: 160px;
 
-    animation: spin 5s linear infinite;
+    animation: spin 4s linear infinite;
   }
 }
 /*CREATION DE L'ANIMATION*/

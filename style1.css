@@ -87,7 +87,8 @@ main .h2-underline {
   border-radius: 15px;
   width: 80%;
   display: flex;
-  position: relative;
+  align-items: center;
+  overflow: hidden;
 }
 .menu li h3 {
   margin-left: 10px;
@@ -105,11 +106,26 @@ main .h2-underline {
   font-size: 16px;
 }
 .menulist-items__price {
-  position: absolute;
-  top: 35px;
-  right: 35px;
+  margin-left: auto;
   font-weight: 700;
   font-size: 18px;
+  padding-right: 35px;
+}
+.menulist-items__transi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  height: 90px;
+  width: 45px;
+  margin-right: -45px;
+  border-top-right-radius: 15px 15px;
+  border-bottom-right-radius: 15px 15px;
+}
+
+.menulist-items__transi .fa-solid {
+  color: white;
+  font-size: x-large;
 }
 
 /*bouton de commande*/

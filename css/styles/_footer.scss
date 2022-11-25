@@ -4,8 +4,8 @@ $footer-backcolor: #46494c;
 $colorscript-light: #ffffff;
 
 footer {
-  background-color: $footer-color;
-  color: $footer-color-script;
+  background-color: $footer-backcolor;
+  color: $colorscript-light;
   font-family: roboto;
 
   h4 {
@@ -30,6 +30,7 @@ footer {
       a {
         color: $colorscript-light;
         font-family: roboto;
+        text-decoration: none;
       }
     }
   }

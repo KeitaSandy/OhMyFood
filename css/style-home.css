@@ -1,11 +1,4 @@
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  font-family: roboto;
-}
-/* loader double cercle*/
-
+/*couleurs*/ /*CREATI0N DU LOADER*/
 .loader-section {
   background-color: #fff;
   height: 100vh;
@@ -15,11 +8,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*ANIMATION*/
   animation: disappear 100ms;
   animation-delay: 3s;
   animation-fill-mode: forwards;
   transform-origin: bottom;
 }
+
 .loader {
   width: 160px;
   height: 160px;
@@ -35,8 +30,7 @@ body {
   border-bottom-color: #ff79da;
   animation: spin 3s linear infinite;
 }
-
-.loader-spinner:after {
+.loader-spinner::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -47,11 +41,9 @@ body {
   border-top-color: #9356dc;
   border-bottom-color: #9356dc;
   border-radius: 160px;
-
   animation: spinreverse 2s linear infinite;
 }
-
-.loader-spinner:before {
+.loader-spinner::before {
   content: "";
   position: absolute;
   top: 15px;
@@ -62,12 +54,10 @@ body {
   border-top-color: #99e2d0;
   border-bottom-color: #99e2d0;
   border-radius: 160px;
-
-  animation: spin 5s linear infinite;
+  animation: spin 4s linear infinite;
 }
 
-/*ANIMATION*/
-
+/*CREATION DE L'ANIMATION*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -76,7 +66,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
 @keyframes spinreverse {
   0% {
     transform: rotate(0deg);
@@ -85,7 +74,6 @@ body {
     transform: rotate(-360deg);
   }
 }
-
 @keyframes disappear {
   0% {
     transform: scale(1);
@@ -94,22 +82,26 @@ body {
     transform: scale(0);
   }
 }
-/* header*/
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: roboto;
+}
 
+/* header*/
 header {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 12px 0;
-  box-shadow: 0px 6px 9px 0px #b9b9b9ab;
+  box-shadow: 0px 6px 9px 0px rgba(185, 185, 185, 0.6705882353);
 }
-
 header img {
   height: 68px;
 }
-/*main*/
-/*bouton de recherche*/
 
+/*bouton de recherche*/
 .recherche-lieu {
   display: flex;
   justify-content: center;
@@ -117,26 +109,23 @@ header img {
   padding: 20px 15px;
   font-size: 18px;
   color: #000000;
-  font-family: roboto;
   font-weight: 600;
 }
-.lieu::placeholder {
-  color: #000000;
-}
-
-input:focus {
-  outline: none;
-}
-.lieu {
+.recherche-lieu .lieu {
   border: none;
   background-color: transparent;
   font-size: 20px;
   font-weight: 700;
   width: 150px;
 }
+.recherche-lieu .lieu:focus {
+  outline: none;
+}
+.recherche-lieu .lieu::placeholder {
+  color: #000000;
+}
 
 /*Description*/
-
 .description {
   display: flex;
   flex-direction: column;
@@ -152,7 +141,6 @@ input:focus {
   margin-bottom: 0;
   margin-top: 40px;
 }
-
 .description p {
   font-size: 16px;
   font-weight: 300;
@@ -160,8 +148,7 @@ input:focus {
   justify-content: center;
   text-align: center;
 }
-
-.description-button {
+.description .description-button {
   border-radius: 30px;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   font-size: 20px;
@@ -175,7 +162,6 @@ input:focus {
 }
 
 /*Fonctionnement*/
-
 .step h2 {
   margin: 50px 0 30px 50px;
   font-weight: 700;
@@ -206,11 +192,13 @@ input:focus {
 .step-list:hover {
   background-color: rgba(147, 86, 220, 0.2);
 }
+
 .step-list .fa-solid {
   color: gray;
   margin-right: 15px;
   margin-left: 40px;
 }
+
 .step-list:hover .fa-solid {
   color: #9356dc;
 }
@@ -230,7 +218,6 @@ input:focus {
 }
 
 /*Liste des restaurants*/
-
 .liste-restaurants {
   margin-top: 40px;
   background-color: #f2f2f2;
@@ -240,6 +227,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
 }
+
 a {
   text-decoration: none;
   color: #000000;
@@ -250,11 +238,13 @@ a {
   font-weight: 700;
   align-self: flex-start;
 }
+
 article {
   position: relative;
   width: 80%;
   margin-bottom: 60px;
 }
+
 .nouveau {
   position: absolute;
   top: 15px;
@@ -263,6 +253,7 @@ article {
   color: #1b6150;
   padding: 10px;
 }
+
 figure {
   border-radius: 30px;
   background-color: #ffffff;
@@ -303,6 +294,7 @@ figcaption p {
   bottom: 20px;
   right: 20px;
 }
+
 /*footer*/
 footer {
   background-color: #46494c;
@@ -329,4 +321,5 @@ footer ul li i {
 footer ul li a {
   color: #ffffff;
   font-family: roboto;
+  text-decoration: none;
 }
