@@ -18,13 +18,13 @@ header {
     display: flex;
     justify-content: center;
     img {
-      height: 68px;
+      height: 45px;
     }
     .backtrack {
       position: absolute;
       font-size: 50px;
       left: 30px;
-      top: 21px;
+      top: 5px;
       .fa-solid {
         color: $colorscript-dark;
       }
@@ -49,7 +49,7 @@ main {
   h1 {
     margin: 0;
     font-family: shrikhand;
-    font-size: 35px;
+    font-size: 28x;
     color: #000000;
     padding-top: 40px;
     padding-left: 90px;
@@ -60,90 +60,100 @@ main {
     top: 45px;
     right: 40px;
     font-size: 40px;
-    .fa-regular {
-      &:hover {
-        background-image: linear-gradient(to bottom right, $pink, $purplue);
-      }
-    }
-  }
 
-  h2 {
-    padding-left: 30px;
-    align-self: flex-start;
-    padding-top: 20px;
-    margin: 0;
+    &:hover {
+      color: #99e2d0;
+      transform: scale(1.2);
+    
   }
-  .h2-underline {
+}
+
+h2 {
+  padding-left: 30px;
+  align-self: flex-start;
+  padding-top: 20px;
+  margin: 0;
+  &::after {
     width: 50px;
     height: 4px;
     background-color: #99e2d0;
-    margin-left: 30px;
+    display: block;
+    content: " ";
   }
-  .menu {
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  padding: 0;
+
+  .menulist {
+    background-color: $colorscript-light;
+    border-radius: 15px;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    row-gap: 30px;
     align-items: center;
-    padding: 0;
-
-    .menulist {
-      background-color: $colorscript-light;
-      border-radius: 15px;
-      width: 80%;
+    overflow: hidden;
+    .menulist-items {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       overflow: hidden;
-      .menulist-items {
-        display: flex;
-        flex-direction: column;
-        h3 {
-          margin-left: 10px;
-          margin-bottom: 0;
-          margin-top: 15px;
-          font-weight: 700;
-          font-size: 20px;
-        }
-        p {
-          margin-left: 10px;
-          margin-bottom: 0;
-          margin-top: 10px;
-          padding-bottom: 20px;
-          font-size: 16px;
-        }
-      }
-      .menulist-items__price {
+      padding-right: 20px;
+      h3 {
+        margin-left: 10px;
+        margin-bottom: 0;
+        margin-top: 15px;
         font-weight: 700;
-        font-size: 18px;
-        margin-left: auto;
-        padding-right: 35px;
+        font-size: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
+      p {
+        margin-left: 10px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding-bottom: 20px;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .menulist-items__price {
+      font-weight: 700;
+      font-size: 18px;
+      margin-left: auto;
+      padding-right: 20px;
+    }
+    .menulist-items__transi {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #99e2d0;
+      height: 90px;
+      width: 90px;
+      margin-right: -90px;
+      border-top-right-radius: 15px 15px;
+      border-bottom-right-radius: 15px 15px;
+      transition: margin-right 800ms;
+
+      .fa-solid {
+        color: white;
+        font-size: xx-large;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+
       .menulist-items__transi {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #99e2d0;
-        height: 90px;
-        width: 60px;
-        margin-right: -60px;
-        border-top-right-radius: 15px 15px;
-        border-bottom-right-radius: 15px 15px;
-        transition: margin-right 500ms;
-
-        .fa-solid {
-          color: white;
-          font-size: xx-large;
-        }
-      }
-      &:hover {
-        cursor: pointer;
-
-        .menulist-items__transi {
-          margin-right: 0;
-        }
+        margin-right: 0;
       }
     }
   }
 }
+
 /*bouton de commande*/
 .bouton {
   display: flex;
@@ -162,6 +172,11 @@ main {
     margin-bottom: 50px;
     margin-top: 30px;
     cursor: pointer;
+    transition: all 300ms;
+    &:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
   }
 }
 @import "../footer";
