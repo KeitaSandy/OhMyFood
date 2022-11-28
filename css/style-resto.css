@@ -87,23 +87,59 @@ main h2::after {
   display: block;
   content: " ";
 }
+main #entrees {
+  animation: appears;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+}
+@keyframes appears {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main #plats {
+  animation: appears;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 500ms;
+}
+@keyframes appears {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main #desserts {
+  animation: appears;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
+}
+@keyframes appears {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 main .menu {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   align-items: center;
   padding: 0;
-  animation: anim-appears 10s backwards;
-}
-@keyframes anim-appears {
-  to {
-    transformy: -100px;
-    opacity: 0;
-  }
-  from {
-    transformy: 0;
-    opacity: 1;
-  }
 }
 main .menu .menulist {
   background-color: #ffffff;

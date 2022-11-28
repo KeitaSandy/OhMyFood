@@ -198,6 +198,7 @@ header img {
 
 .step-list:hover {
   background-color: rgba(147, 86, 220, 0.2);
+  cursor: pointer;
 }
 
 .step-list .fa-solid {
