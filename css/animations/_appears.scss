@@ -1,0 +1,15 @@
+/* creation menu deroulant*/
+@mixin appears {
+  animation: anim-appears 10s backwards;
+
+  @keyframes anim-appears {
+    to {
+      transformy: (-100px);
+      opacity: 0;
+    }
+    from {
+      transformy: (0);
+      opacity: 1;
+    }
+  }
+}
