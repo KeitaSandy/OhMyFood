@@ -13,6 +13,7 @@
   animation-delay: 3s;
   animation-fill-mode: forwards;
   transform-origin: bottom;
+  animation-timing-function: cubic-bezier(0.35, 0.37, 0.72, 0.74);
 }
 
 .loader {
@@ -82,6 +83,7 @@
     transform: scale(0);
   }
 }
+/*ANIMATION DU COEUR*/
 body {
   display: flex;
   flex-direction: column;
@@ -298,6 +300,20 @@ figcaption p {
   position: absolute;
   bottom: 20px;
   right: 20px;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-text-stroke: 2px #000000;
+  -webkit-animation: all 100ms;
+  animation: all 100ms;
+}
+.favori:hover {
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-text-stroke: transparent;
+  cursor: pointer;
 }
 
 /*footer*/

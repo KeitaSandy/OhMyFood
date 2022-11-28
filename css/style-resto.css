@@ -1,4 +1,4 @@
-/*couleurs*/
+/*couleurs*/ /*ANIMATION DU COEUR*/ /* creation menu deroulant*/
 body {
   display: flex;
   flex-direction: column;
@@ -31,6 +31,7 @@ header nav .backtrack .fa-solid {
   color: #000000;
 }
 header .photo-restaurant img {
+  -o-object-fit: cover;
   object-fit: cover;
   height: 400px;
   width: 100%;
@@ -43,6 +44,7 @@ main {
   width: 100%;
   position: relative;
   margin-top: -60px;
+  /*bouton de commande*/
 }
 main h1 {
   margin: 0;
@@ -54,39 +56,56 @@ main h1 {
 }
 main .favori {
   position: absolute;
-  top: 45px;
-  right: 40px;
+  top: 40px;
+  right: 55px;
   font-size: 40px;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-text-stroke: 2px #000000;
+  -webkit-animation: all 100ms;
+  animation: all 100ms;
 }
 main .favori:hover {
-  color: #99e2d0;
-  transform: scale(1.2);
-  background-color: blue;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-text-stroke: transparent;
+  cursor: pointer;
 }
-
-h2 {
+main h2 {
   padding-left: 30px;
   align-self: flex-start;
   padding-top: 20px;
   margin: 0;
 }
-h2::after {
+main h2::after {
   width: 50px;
   height: 4px;
   background-color: #99e2d0;
   display: block;
   content: " ";
 }
-
-.menu {
+main .menu {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   align-items: center;
   padding: 0;
+  animation: anim-appears 10s backwards;
 }
-.menu .menulist {
+@keyframes anim-appears {
+  to {
+    transformy: -100px;
+    opacity: 0;
+  }
+  from {
+    transformy: 0;
+    opacity: 1;
+  }
+}
+main .menu .menulist {
   background-color: #ffffff;
   border-radius: 15px;
   width: 80%;
@@ -94,13 +113,13 @@ h2::after {
   align-items: center;
   overflow: hidden;
 }
-.menu .menulist .menulist-items {
+main .menu .menulist .menulist-items {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding-right: 20px;
 }
-.menu .menulist .menulist-items h3 {
+main .menu .menulist .menulist-items h3 {
   margin-left: 10px;
   margin-bottom: 0;
   margin-top: 15px;
@@ -110,7 +129,7 @@ h2::after {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu .menulist .menulist-items p {
+main .menu .menulist .menulist-items p {
   margin-left: 10px;
   margin-bottom: 0;
   margin-top: 10px;
@@ -120,13 +139,13 @@ h2::after {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu .menulist .menulist-items__price {
+main .menu .menulist .menulist-items__price {
   font-weight: 700;
   font-size: 18px;
   margin-left: auto;
   padding-right: 20px;
 }
-.menu .menulist .menulist-items__transi {
+main .menu .menulist .menulist-items__transi {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,25 +157,23 @@ h2::after {
   border-bottom-right-radius: 15px 15px;
   transition: margin-right 800ms;
 }
-.menu .menulist .menulist-items__transi .fa-solid {
+main .menu .menulist .menulist-items__transi .fa-solid {
   color: white;
   font-size: xx-large;
 }
-.menu .menulist:hover {
+main .menu .menulist:hover {
   cursor: pointer;
 }
-.menu .menulist:hover .menulist-items__transi {
+main .menu .menulist:hover .menulist-items__transi {
   margin-right: 0;
 }
-
-/*bouton de commande*/
-.bouton {
+main .bouton {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.bouton .bouton-order {
+main .bouton .bouton-order {
   border-radius: 30px;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   font-size: 35px;
@@ -169,8 +186,9 @@ h2::after {
   cursor: pointer;
   transition: all 300ms;
 }
-.bouton .bouton-order:hover {
+main .bouton .bouton-order:hover {
   transform: scale(1.05);
+  -webkit-filter: brightness(1.2);
   filter: brightness(1.2);
 }
 
