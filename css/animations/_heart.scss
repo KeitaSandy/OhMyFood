@@ -1,7 +1,6 @@
 /*ANIMATION DU COEUR*/
 @mixin heart {
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   -webkit-text-stroke: 2px #000000;
   -webkit-animation: all 100ms;
   animation: all 100ms;
@@ -11,7 +10,6 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
     -webkit-text-stroke: transparent;
     cursor: pointer;
   }

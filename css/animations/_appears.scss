@@ -1,10 +1,10 @@
 /* creation menu deroulant*/
-@mixin appears-delay__0 {
+@mixin appears-menu__delay0 {
   animation: appears;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
 
-  @keyframes appears {
+  @keyframes appears-menu {
     from {
       transform: translateY(-100px);
       opacity: 0;
@@ -16,7 +16,7 @@
   }
 }
 
-@mixin appears-delay__1 {
+@mixin appears-menu__delay1 {
   animation: appears;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
@@ -34,7 +34,7 @@
   }
 }
 
-@mixin appears-delay__2 {
+@mixin appears-menu__delay2 {
   animation: appears;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
