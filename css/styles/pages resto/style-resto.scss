@@ -57,7 +57,7 @@ main {
   h1 {
     margin: 0;
     font-family: shrikhand;
-    font-size: 28x;
+    font-size: 28Px;
     color: #000000;
     padding-top: 40px;
     padding-left: 90px;
@@ -208,3 +208,24 @@ main {
 }
 
 @import "../footer";
+
+/*mise en place des medias queries*/
+@media screen and (min-width: 1024px) {
+  .restau-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: -webkit-fill-available;
+
+    #entrees,
+    #plats,
+    #desserts {
+      width: 33%;
+    }
+
+    .menulist-items {
+      width: 75%;
+    }
+  }
+}

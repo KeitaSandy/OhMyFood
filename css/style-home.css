@@ -166,6 +166,10 @@ header img {
   filter: brightness(1.2);
 }
 
+h2 {
+  margin-left: 50px;
+}
+
 /*Fonctionnement*/
 .step h2 {
   margin: 50px 0 30px 50px;
@@ -227,31 +231,32 @@ header img {
 .liste-restaurants {
   margin-top: 40px;
   background-color: #f2f2f2;
-  padding-top: 40px;
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
 .liste-restaurants h2 {
   margin-left: 50px;
   font-weight: 700;
   align-self: flex-start;
 }
-
-article {
+.liste-restaurants .liste-restaurant__cartes {
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fill-available;
+  align-items: center;
+}
+.liste-restaurants .liste-restaurant__cartes article {
   position: relative;
   width: 80%;
   margin-bottom: 60px;
 }
-
-.nouveau {
+.liste-restaurants .liste-restaurant__cartes article a {
+  text-decoration: none;
+  color: #000000;
+}
+.liste-restaurants .liste-restaurant__cartes article .nouveau {
   position: absolute;
   top: 15px;
   right: 12px;
@@ -259,8 +264,7 @@ article {
   color: #1b6150;
   padding: 10px;
 }
-
-figure {
+.liste-restaurants .liste-restaurant__cartes article figure {
   border-radius: 30px;
   background-color: #ffffff;
   height: 270px;
@@ -268,34 +272,29 @@ figure {
   position: relative;
   margin: 0;
 }
-
-figure img {
+.liste-restaurants .liste-restaurant__cartes article figure img {
   width: 100%;
   border-radius: 30px 30px 0 0;
   height: 200px;
   object-fit: cover;
 }
-
-figcaption {
+.liste-restaurants .liste-restaurant__cartes article figure figcaption {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
 }
-
-figcaption h3 {
+.liste-restaurants .liste-restaurant__cartes article figure figcaption h3 {
   font-size: 15px;
   font-family: roboto;
   margin: 0;
 }
-
-figcaption p {
+.liste-restaurants .liste-restaurant__cartes article figure figcaption p {
   font-size: 12px;
   font-family: Roboto;
   font-weight: 500;
   margin-top: 5px;
 }
-
-.favori {
+.liste-restaurants .liste-restaurant__cartes article .favori {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -305,7 +304,7 @@ figcaption p {
   -webkit-animation: all 100ms;
   animation: all 100ms;
 }
-.favori:hover {
+.liste-restaurants .liste-restaurant__cartes article .favori:hover {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
@@ -341,4 +340,54 @@ footer ul li a {
   color: #ffffff;
   font-family: roboto;
   text-decoration: none;
+}
+
+/*mise en place media queries*/
+@media screen and (min-width: 1024px) {
+  .description {
+    background-image: none;
+    background-color: rgba(242, 242, 242, 0.8705882353);
+  }
+  h1 br,
+p br {
+    display: none;
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(239, 239, 239);
+  }
+  .step h2 {
+    margin: auto;
+  }
+  .step ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .step ol .step-list {
+    width: 28%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .liste-restaurants {
+    padding: 0;
+  }
+  .liste-restaurants h2 {
+    padding-top: 30px;
+    margin: auto;
+  }
+  .liste-restaurants .liste-restaurant__cartes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: -webkit-fill-available;
+  }
+  .liste-restaurants .liste-restaurant__cartes article {
+    width: 40%;
+    margin: 40px;
+  }
 }
