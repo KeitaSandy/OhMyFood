@@ -76,6 +76,7 @@ main {
     align-self: flex-start;
     padding-top: 20px;
     margin: 0;
+    text-transform: uppercase;
 
     &::after {
       width: 50px;
@@ -96,6 +97,10 @@ main {
 
   #desserts {
     @include appears-menu__delay2;
+  }
+
+  .restau-menu {
+    padding-top: 20px;
   }
 
   .menu {
@@ -184,12 +189,6 @@ main {
     align-items: center;
     text-align: center;
 
-    &:hover {
-      transform: scale(1.05);
-      -webkit-filter: brightness(1.2);
-      filter: brightness(1.2);
-    }
-
     .bouton-order {
       border-radius: 30px;
       background-image: linear-gradient(to bottom right, $pink, $purplue);
@@ -201,7 +200,13 @@ main {
       margin-bottom: 50px;
       margin-top: 30px;
       cursor: pointer;
-      transition: all 300ms;
+      transition: all 250ms ease 0ms;
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 8px 8px 2px #acabab;
+        filter: brightness(1.2)
+      }
 
     }
   }
