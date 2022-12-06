@@ -22,14 +22,14 @@ header {
     justify-content: center;
 
     img {
-      height: 45px;
+      height: 40px;
     }
 
     .backtrack {
       position: absolute;
-      font-size: 50px;
-      left: 30px;
-      top: 5px;
+      font-size: 48px;
+      left: 12px;
+      top: 0px;
 
       .fa-solid {
         color: $colorscript-dark;
@@ -57,10 +57,10 @@ main {
   h1 {
     margin: 0;
     font-family: shrikhand;
-    font-size: 28Px;
+    font-size: 25Px;
     color: #000000;
     padding-top: 40px;
-    padding-left: 90px;
+    padding-left: 27px;
   }
 
   .favori {
@@ -78,6 +78,8 @@ main {
     margin: 0;
     text-transform: uppercase;
 
+
+
     &::after {
       width: 50px;
       height: 4px;
@@ -87,130 +89,152 @@ main {
     }
   }
 
-  #entrees {
-    @include appears-menu__delay0;
-  }
-
-  #plats {
-    @include appears-menu__delay1;
-  }
-
-  #desserts {
-    @include appears-menu__delay2;
-  }
-
   .restau-menu {
     padding-top: 20px;
-  }
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    align-items: center;
-    padding: 0;
+    #entrees .menu {
+      opacity: 0;
+      -webkit-animation: appears 1s linear forwards;
+      animation: appears 1s linear forwards;
+      -webkit-animation-delay: 0.75s;
+      animation-delay: 0.75s;
 
-    .menulist {
-      background-color: $colorscript-light;
-      border-radius: 15px;
-      width: 80%;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-
-      .menulist-items {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        padding-right: 20px;
-
-        h3 {
-          margin-left: 10px;
-          margin-bottom: 0;
-          margin-top: 15px;
-          font-weight: 700;
-          font-size: 20px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-
-        p {
-          margin-left: 10px;
-          margin-bottom: 0;
-          margin-top: 10px;
-          padding-bottom: 20px;
-          font-size: 16px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-      }
-
-      .menulist-items__price {
-        font-weight: 700;
-        font-size: 18px;
-        margin-left: auto;
-        padding-right: 20px;
-      }
-
-      .menulist-items__transi {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #99e2d0;
-        height: 90px;
-        width: 90px;
-        margin-right: -90px;
-        border-top-right-radius: 15px 15px;
-        border-bottom-right-radius: 15px 15px;
-        transition: margin-right 800ms;
-
-        .fa-solid {
-          color: white;
-          font-size: xx-large;
-        }
-      }
-
-      &:hover {
-        cursor: pointer;
-
-        .menulist-items__transi {
-          margin-right: 0;
-        }
-      }
     }
-  }
 
-  /*bouton de commande*/
-  .bouton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    #plats .menu {
+      opacity: 0;
+      -webkit-animation: appears 1s linear forwards;
+      animation: appears 1s linear forwards;
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
 
-    .bouton-order {
-      border-radius: 30px;
-      background-image: linear-gradient(to bottom right, $pink, $purplue);
-      font-size: 35px;
-      color: $colorscript-light;
-      border: none;
-      padding: 16px;
-      box-shadow: 4px 4px 2px $shadow;
-      margin-bottom: 50px;
-      margin-top: 30px;
-      cursor: pointer;
-      transition: all 250ms ease 0ms;
+    }
 
-      &:hover {
-        transform: scale(1.02);
-        box-shadow: 8px 8px 2px #acabab;
-        filter: brightness(1.2)
-      }
-
+    #desserts .menu{
+      opacity: 0;
+      -webkit-animation: appears 1s linear forwards;
+      animation: appears 1s linear forwards;
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s;
     }
   }
 }
+
+
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  padding: 0;
+
+
+  .menulist {
+    background-color: $colorscript-light;
+    border-radius: 15px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+
+    .menulist-items {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-right: 20px;
+
+      h3 {
+        margin-left: 10px;
+        margin-bottom: 0;
+        margin-top: 15px;
+        font-weight: 700;
+        font-size: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      p {
+        margin-left: 10px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding-bottom: 20px;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .menulist-items__price {
+      font-weight: 700;
+      font-size: 18px;
+      margin-left: auto;
+      padding-right: 20px;
+    }
+
+    .menulist-items__transi {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #99e2d0;
+      height: 90px;
+      width: 90px;
+      margin-right: -90px;
+      border-top-right-radius: 15px 15px;
+      border-bottom-right-radius: 15px 15px;
+      transition: margin-right 800ms;
+
+      .fa-solid {
+        color: white;
+        font-size: xx-large;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .menulist-items__transi {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/*bouton de commande*/
+.bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .bouton-order {
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom right, $pink, $purplue);
+    font-size: 35px;
+    color: $colorscript-light;
+    border: none;
+    padding: 16px;
+    box-shadow: 4px 4px 2px $shadow;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 250ms ease 0ms;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 8px 8px 2px #acabab;
+      -webkit-filter: brightness(1.2);
+      filter: brightness(1.2)
+    }
+
+  }
+}
+
+
 
 @import "../footer";
 
@@ -222,6 +246,11 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     width: -webkit-fill-available;
+
+    h2 {
+      
+      justify-content: center;
+    }
 
     #entrees,
     #plats,

@@ -40,10 +40,26 @@ header {
     background-color: transparent;
     font-size: 20px;
     font-weight: 700;
-    width: 150px;
+    width: 174px;
 
     &:focus {
       outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $colorscript-dark;
+    }
+
+    &::-moz-placeholder {
+      color: $colorscript-dark;
+    }
+
+    &:-ms-input-placeholder {
+      color: $colorscript-dark;
+    }
+
+    &::-ms-input-placeholder {
+      color: $colorscript-dark;
     }
 
     &::placeholder {
@@ -93,6 +109,7 @@ header {
 
     &:hover {
       transform: scale(1.02);
+      -webkit-filter: brightness(1.2);
       filter: brightness(1.2);
       box-shadow: 8px 8px 2px #acabab;
     }
@@ -218,6 +235,7 @@ h2 {
           width: 100%;
           border-radius: 30px 30px 0 0;
           height: 200px;
+          -o-object-fit: cover;
           object-fit: cover;
         }
 

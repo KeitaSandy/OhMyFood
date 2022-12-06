@@ -10,9 +10,10 @@
   justify-content: center;
   align-items: center;
   /*ANIMATION*/
-  animation: disappear 100ms;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: disappear 0.5s forwards;
+          animation: disappear 0.5s forwards;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .loader {
@@ -28,7 +29,8 @@
   border: 6px solid transparent;
   border-top-color: #ff79da;
   border-bottom-color: #ff79da;
-  animation: spin 3s linear infinite;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
 
   &::after {
     content: "";
@@ -42,7 +44,9 @@
     border-bottom-color: #9356dc;
     border-radius: 160px;
 
-    animation: spinreverse 2s linear infinite;
+    -webkit-animation: spinreverse 2s linear infinite;
+
+            animation: spinreverse 2s linear infinite;
   }
 
   &::before {
@@ -57,11 +61,23 @@
     border-bottom-color: #99e2d0;
     border-radius: 160px;
 
-    animation: spin 4s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+
+            animation: spin 4s linear infinite;
   }
 }
 
 /*CREATION DE L'ANIMATION*/
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes spin {
   0% {
@@ -70,6 +86,16 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinreverse {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
@@ -83,12 +109,32 @@
   }
 }
 
-@keyframes disappear {
+@-webkit-keyframes disappear {
   0% {
+    opacity: 1;
+  }
+
+  99% {
     scale: 1;
   }
 
   100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    scale: 1;
+  }
+
+  100% {
+    opacity: 0;
     scale: 0;
   }
 }

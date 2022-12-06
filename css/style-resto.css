@@ -1,4 +1,24 @@
 /*couleurs*/ /*ANIMATION DU COEUR*/ /* creation menu deroulant*/
+@-webkit-keyframes appears {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appears {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -19,13 +39,13 @@ header nav {
   justify-content: center;
 }
 header nav img {
-  height: 45px;
+  height: 40px;
 }
 header nav .backtrack {
   position: absolute;
-  font-size: 50px;
-  left: 30px;
-  top: 5px;
+  font-size: 48px;
+  left: 12px;
+  top: 0px;
 }
 header nav .backtrack .fa-solid {
   color: #000000;
@@ -44,15 +64,14 @@ main {
   width: 100%;
   position: relative;
   margin-top: -60px;
-  /*bouton de commande*/
 }
 main h1 {
   margin: 0;
   font-family: shrikhand;
-  font-size: 28Px;
+  font-size: 25Px;
   color: #000000;
   padding-top: 40px;
-  padding-left: 90px;
+  padding-left: 27px;
 }
 main .favori {
   position: absolute;
@@ -86,64 +105,39 @@ main h2::after {
   display: block;
   content: " ";
 }
-main #entrees {
-  animation: appears;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-}
-@keyframes appears-menu {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-main #plats {
-  animation: appears;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 500ms;
-}
-@keyframes appears {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-main #desserts {
-  animation: appears;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 1000ms;
-}
-@keyframes appears {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 main .restau-menu {
   padding-top: 20px;
 }
-main .menu {
+main .restau-menu #entrees .menu {
+  opacity: 0;
+  -webkit-animation: appears 1s linear forwards;
+  animation: appears 1s linear forwards;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+main .restau-menu #plats .menu {
+  opacity: 0;
+  -webkit-animation: appears 1s linear forwards;
+  animation: appears 1s linear forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+main .restau-menu #desserts .menu {
+  opacity: 0;
+  -webkit-animation: appears 1s linear forwards;
+  animation: appears 1s linear forwards;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.menu {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
   align-items: center;
   padding: 0;
 }
-main .menu .menulist {
+.menu .menulist {
   background-color: #ffffff;
   border-radius: 15px;
   width: 80%;
@@ -151,13 +145,13 @@ main .menu .menulist {
   align-items: center;
   overflow: hidden;
 }
-main .menu .menulist .menulist-items {
+.menu .menulist .menulist-items {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding-right: 20px;
 }
-main .menu .menulist .menulist-items h3 {
+.menu .menulist .menulist-items h3 {
   margin-left: 10px;
   margin-bottom: 0;
   margin-top: 15px;
@@ -167,7 +161,7 @@ main .menu .menulist .menulist-items h3 {
   overflow: hidden;
   white-space: nowrap;
 }
-main .menu .menulist .menulist-items p {
+.menu .menulist .menulist-items p {
   margin-left: 10px;
   margin-bottom: 0;
   margin-top: 10px;
@@ -177,13 +171,13 @@ main .menu .menulist .menulist-items p {
   overflow: hidden;
   white-space: nowrap;
 }
-main .menu .menulist .menulist-items__price {
+.menu .menulist .menulist-items__price {
   font-weight: 700;
   font-size: 18px;
   margin-left: auto;
   padding-right: 20px;
 }
-main .menu .menulist .menulist-items__transi {
+.menu .menulist .menulist-items__transi {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,23 +189,25 @@ main .menu .menulist .menulist-items__transi {
   border-bottom-right-radius: 15px 15px;
   transition: margin-right 800ms;
 }
-main .menu .menulist .menulist-items__transi .fa-solid {
+.menu .menulist .menulist-items__transi .fa-solid {
   color: white;
   font-size: xx-large;
 }
-main .menu .menulist:hover {
+.menu .menulist:hover {
   cursor: pointer;
 }
-main .menu .menulist:hover .menulist-items__transi {
+.menu .menulist:hover .menulist-items__transi {
   margin-right: 0;
 }
-main .bouton {
+
+/*bouton de commande*/
+.bouton {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-main .bouton .bouton-order {
+.bouton .bouton-order {
   border-radius: 30px;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   font-size: 35px;
@@ -224,9 +220,10 @@ main .bouton .bouton-order {
   cursor: pointer;
   transition: all 250ms ease 0ms;
 }
-main .bouton .bouton-order:hover {
+.bouton .bouton-order:hover {
   transform: scale(1.02);
   box-shadow: 8px 8px 2px #acabab;
+  -webkit-filter: brightness(1.2);
   filter: brightness(1.2);
 }
 
@@ -267,6 +264,9 @@ footer ul li a {
     flex-wrap: wrap;
     justify-content: center;
     width: -webkit-fill-available;
+  }
+  .restau-menu h2 {
+    justify-content: center;
   }
   .restau-menu #entrees,
 .restau-menu #plats,

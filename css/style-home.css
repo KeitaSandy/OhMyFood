@@ -9,9 +9,10 @@
   justify-content: center;
   align-items: center;
   /*ANIMATION*/
-  animation: disappear 100ms;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: disappear 0.5s forwards;
+  animation: disappear 0.5s forwards;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 
 .loader {
@@ -27,6 +28,7 @@
   border: 6px solid transparent;
   border-top-color: #ff79da;
   border-bottom-color: #ff79da;
+  -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
 .loader-spinner::after {
@@ -40,6 +42,7 @@
   border-top-color: #9356dc;
   border-bottom-color: #9356dc;
   border-radius: 160px;
+  -webkit-animation: spinreverse 2s linear infinite;
   animation: spinreverse 2s linear infinite;
 }
 .loader-spinner::before {
@@ -53,16 +56,33 @@
   border-top-color: #99e2d0;
   border-bottom-color: #99e2d0;
   border-radius: 160px;
+  -webkit-animation: spin 4s linear infinite;
   animation: spin 4s linear infinite;
 }
 
 /*CREATION DE L'ANIMATION*/
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinreverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 @keyframes spinreverse {
@@ -73,15 +93,51 @@
     transform: rotate(-360deg);
   }
 }
-@keyframes disappear {
+@-webkit-keyframes disappear {
   0% {
+    opacity: 1;
+  }
+  99% {
     scale: 1;
   }
   100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
     scale: 0;
   }
 }
 /*ANIMATION DU COEUR*/ /* creation menu deroulant*/
+@-webkit-keyframes appears {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appears {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -116,10 +172,22 @@ header img {
   background-color: transparent;
   font-size: 20px;
   font-weight: 700;
-  width: 150px;
+  width: 174px;
 }
 .recherche-lieu .lieu:focus {
   outline: none;
+}
+.recherche-lieu .lieu::-webkit-input-placeholder {
+  color: #000000;
+}
+.recherche-lieu .lieu::-moz-placeholder {
+  color: #000000;
+}
+.recherche-lieu .lieu:-ms-input-placeholder {
+  color: #000000;
+}
+.recherche-lieu .lieu::-ms-input-placeholder {
+  color: #000000;
 }
 .recherche-lieu .lieu::placeholder {
   color: #000000;
@@ -163,6 +231,7 @@ header img {
 }
 .description .description-button:hover {
   transform: scale(1.02);
+  -webkit-filter: brightness(1.2);
   filter: brightness(1.2);
   box-shadow: 8px 8px 2px #acabab;
 }
@@ -279,6 +348,7 @@ h2 {
   width: 100%;
   border-radius: 30px 30px 0 0;
   height: 200px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .liste-restaurants .liste-restaurant__cartes article figure figcaption {
