@@ -156,7 +156,7 @@ main .restau-menu #desserts .menu {
   margin-bottom: 0;
   margin-top: 15px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -166,7 +166,7 @@ main .restau-menu #desserts .menu {
   margin-bottom: 0;
   margin-top: 10px;
   padding-bottom: 20px;
-  font-size: 16px;
+  font-size: 13px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

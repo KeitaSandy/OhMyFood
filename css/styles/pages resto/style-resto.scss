@@ -110,7 +110,7 @@ main {
 
     }
 
-    #desserts .menu{
+    #desserts .menu {
       opacity: 0;
       -webkit-animation: appears 1s linear forwards;
       animation: appears 1s linear forwards;
@@ -151,7 +151,7 @@ main {
         margin-bottom: 0;
         margin-top: 15px;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 16px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -162,7 +162,7 @@ main {
         margin-bottom: 0;
         margin-top: 10px;
         padding-bottom: 20px;
-        font-size: 16px;
+        font-size: 13px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -248,7 +248,7 @@ main {
     width: -webkit-fill-available;
 
     h2 {
-      
+
       justify-content: center;
     }
 
@@ -260,6 +260,8 @@ main {
 
     .menulist-items {
       width: 75%;
+
+     
     }
   }
 }
