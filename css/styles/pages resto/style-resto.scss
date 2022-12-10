@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 12px 0;
+  padding: 0 0 12px;
 
   nav {
     display: flex;
@@ -23,13 +23,14 @@ header {
 
     img {
       height: 40px;
+      margin: 15px;
     }
 
     .backtrack {
       position: absolute;
-      font-size: 48px;
-      left: 12px;
-      top: 0px;
+      font-size: 20px;
+      left: 40px;
+      top: 25px;
 
       .fa-solid {
         color: $colorscript-dark;
@@ -77,11 +78,13 @@ main {
     padding-top: 20px;
     margin: 0;
     text-transform: uppercase;
+    font-weight: 100;
+    font-size: 15px;
 
 
 
     &::after {
-      width: 50px;
+      width: 35px;
       height: 4px;
       background-color: #99e2d0;
       display: block;
@@ -199,6 +202,11 @@ main {
 
       .menulist-items__transi {
         margin-right: 0;
+
+        .fa-solid {
+          transform: rotate(360deg);
+          transition: 800ms ease-in-out;
+        }
       }
     }
   }
@@ -261,7 +269,6 @@ main {
     .menulist-items {
       width: 75%;
 
-     
     }
   }
 }

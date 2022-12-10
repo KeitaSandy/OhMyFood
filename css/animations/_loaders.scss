@@ -11,9 +11,9 @@
   align-items: center;
   /*ANIMATION*/
   -webkit-animation: disappear 0.5s forwards;
-          animation: disappear 0.5s forwards;
+  animation: disappear 0.5s forwards;
   -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 
 .loader {
@@ -30,7 +30,7 @@
   border-top-color: #ff79da;
   border-bottom-color: #ff79da;
   -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
 
   &::after {
     content: "";
@@ -46,7 +46,7 @@
 
     -webkit-animation: spinreverse 2s linear infinite;
 
-            animation: spinreverse 2s linear infinite;
+    animation: spinreverse 2s linear infinite;
   }
 
   &::before {
@@ -63,7 +63,7 @@
 
     -webkit-animation: spin 4s linear infinite;
 
-            animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
   }
 }
 
@@ -115,12 +115,11 @@
   }
 
   99% {
-    scale: 1;
+    transform: scale(1);
   }
 
   100% {
-    opacity: 0;
-    scale: 0;
+    transform: scale(0);
   }
 }
 
@@ -130,11 +129,11 @@
   }
 
   99% {
-    scale: 1;
+    transform: scale(1);
   }
 
   100% {
     opacity: 0;
-    scale: 0;
+    transform: scale(0);
   }
 }

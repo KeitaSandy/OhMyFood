@@ -98,11 +98,10 @@
     opacity: 1;
   }
   99% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
-    opacity: 0;
-    scale: 0;
+    transform: scale(0);
   }
 }
 @keyframes disappear {
@@ -110,11 +109,11 @@
     opacity: 1;
   }
   99% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
     opacity: 0;
-    scale: 0;
+    transform: scale(0);
   }
 }
 /*ANIMATION DU COEUR*/ /* creation menu deroulant*/
@@ -244,7 +243,6 @@ h2 {
 .step h2 {
   margin: 50px 0 30px 50px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .step-list {
@@ -311,7 +309,6 @@ h2 {
   margin-left: 50px;
   font-weight: 700;
   align-self: flex-start;
-  text-transform: uppercase;
 }
 .liste-restaurants .liste-restaurant__cartes {
   display: flex;

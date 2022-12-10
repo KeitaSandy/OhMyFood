@@ -32,7 +32,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 12px 0;
+  padding: 0 0 12px;
 }
 header nav {
   display: flex;
@@ -40,12 +40,13 @@ header nav {
 }
 header nav img {
   height: 40px;
+  margin: 15px;
 }
 header nav .backtrack {
   position: absolute;
-  font-size: 48px;
-  left: 12px;
-  top: 0px;
+  font-size: 20px;
+  left: 40px;
+  top: 25px;
 }
 header nav .backtrack .fa-solid {
   color: #000000;
@@ -97,9 +98,11 @@ main h2 {
   padding-top: 20px;
   margin: 0;
   text-transform: uppercase;
+  font-weight: 100;
+  font-size: 15px;
 }
 main h2::after {
-  width: 50px;
+  width: 35px;
   height: 4px;
   background-color: #99e2d0;
   display: block;
@@ -198,6 +201,10 @@ main .restau-menu #desserts .menu {
 }
 .menu .menulist:hover .menulist-items__transi {
   margin-right: 0;
+}
+.menu .menulist:hover .menulist-items__transi .fa-solid {
+  transform: rotate(360deg);
+  transition: 800ms ease-in-out;
 }
 
 /*bouton de commande*/
